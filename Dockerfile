@@ -8,6 +8,6 @@ RUN pip install -r requirements.txt
 
 COPY . .
 
-EXPOSE 7070
+EXPOSE 7979
 
-CMD ["./manage.py","runserver","7070"]
+CMD ["./manage.py","runserver","7979"]
