@@ -11,4 +11,4 @@ COPY . .
 
 EXPOSE 7979
 
-CMD ["python3 manage.py","runserver","0.0.0.0:7979"]
+CMD ["./manage.py","runserver","0.0.0.0:7979"]
