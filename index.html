@@ -1,1 +1,1954 @@
-hihi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LANEIGE</title>
+    <style>
+body{margin: 0;}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+p{
+    margin: 0;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header{
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    position: relative;
+    border-bottom: 1px solid #ddd;
+}
+.logo{
+    width: 160px;
+    /* height: 22px; */
+    height: 57px;
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.logo img{
+    width: 85%;
+}
+.logo_link{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../laneige_img/laneige-logo.png);
+}
+.h_icon{
+    height: 100%;
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.h_icon a{
+    display: block;
+    float: left;
+}
+.h_icon img{
+    padding: 13px;
+    padding-left: 0px;
+    width: 35px;
+    height: 35px;
+}
+nav{
+    height: 100%;
+    text-align: center;
+    /* position: relative; */
+}
+.nav_btn{
+    display: inline-block;
+    line-height: 60px;
+    position: relative; 
+}
+.nav_item{
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.nav_item:hover{
+    font-weight: bold;
+}
+.nav_bar { 
+    height: 3px;
+    transition: all 0.5s;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #79a3dc;
+}
+.pan{
+    width: 100%;
+    height: 0;
+    background: #f7f7f7;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: 9;
+}
+.pan_active {
+    height: 480px;
+}
+.pan_container{
+    width: 100%;
+    max-width: 1200px;
+    height: 480px;
+    margin: 0 auto;
+
+}
+.nav_sub_item {
+    width: 100%;
+    height: 100%;
+    display: none;
+    /* left: 0;
+    top: 0; */
+    
+}
+.nav_sub_item_active {
+    display: block;
+    z-index: 9;
+}
+#sub_item1_L{
+    width: 60%;
+    height: 100%;
+    float: left;
+    
+}
+.brand_box{
+    width: 150px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 300px;
+    text-align: initial;
+}
+.brand_box > p{
+    margin-bottom: 13px;
+    color: #5f5f5f;
+}
+.brand_box > p:hover{
+    color: #444444;
+    font-weight: 900;
+}
+#sub_item1_R{
+    width: 40%;
+    height: 100%;
+    float: right;
+    
+    padding: 30px;
+    box-sizing: border-box;
+}
+.category_img{
+    width: 300px;
+    height: 250px;
+    cursor: pointer;
+    margin-top: 35px;
+}
+.category_img > img{
+    width: 100%;
+    height: 100%;
+}
+.sub_item > p{
+    margin-top: 12px;
+    text-align: initial;
+    font-size: 15px;
+}
+.sub_item > p:nth-child(2){
+    color: #4477be;
+    font-weight: 900;
+}
+#sub_item2_L{
+    width: 60%;
+    height: 100%;
+    float: left;
+    
+}
+.best_box{
+    width: 150px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 400px;
+    text-align: initial;
+}
+.best_box > p{
+    margin-bottom: 13px;
+    color: #5f5f5f;
+}
+.best_box > p:hover{
+    color: #444444;
+    font-weight: 900;
+}
+#sub_item2_R{
+    width: 40%;
+    height: 100%;
+    float: right;
+    
+    padding: 30px;
+    box-sizing: border-box;
+
+}
+#sub_item3_L{
+    width: 70%;
+    height: 100%;
+    float: left;
+    
+}
+.category_menu{
+    width: calc(100%/5);
+    height: 100%;
+    box-sizing: border-box;
+    float: left;
+    text-align: initial;
+    padding: 30px;
+}
+.category_menu p{
+    margin-top: 10px;
+    color: #5f5f5f;
+    font-size: 14px;
+}
+.category_menu p:hover{
+    color: #444444;
+    font-weight: 900;
+}
+.category_menu1 p:nth-child(1){
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #2b2b2b;
+}
+.category_menu1 p:nth-child(2){
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #2b2b2b;
+}
+.category_menu1 p:nth-child(6){
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #2b2b2b;
+}
+.category_menu1 p:nth-child(9){
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #2b2b2b;
+}
+.category_menu2 p{
+    margin-top: 10px;
+    color: #5f5f5f;
+    font-size: 14px;
+}
+.category_menu2 p:nth-child(1){
+    margin-top: 36px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+}
+.category_menu3 p{
+    margin-top: 10px;
+    color: #5f5f5f;
+    font-size: 14px;
+}
+.category_menu3 p:nth-child(1){
+    margin-top: 36px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+}
+.category_menu4 p:nth-child(1){
+    margin-top: 36px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+}
+.category_menu5 p:nth-child(1){
+    margin-top: 36px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #000;
+}
+.category_menu5 p:nth-child(5){
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #2b2b2b;
+}
+#sub_item3_R{
+    width: 25%;
+    height: 100%;
+    float: right;
+    
+    padding: 30px;
+}
+#sub_item4_L{
+    width: 70%;
+    height: 100%;
+    float: left;
+    
+}
+#sub_item4_R{
+    width: 25%;
+    height: 100%;
+    float: right;
+    
+    padding: 30px;
+}
+#sub_item5_L{
+    width: 70%;
+    height: 100%;
+    float: left;
+    
+}
+#sub_item5_R{
+    width: 25%;
+    height: 100%;
+    float: right;
+    
+    padding: 30px;
+}
+.banner_container{
+    width: 100%;
+    padding-top: 600px;
+    position: relative;
+    overflow: hidden;
+}
+.banner{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+.banner1{
+    background: #f34689;
+}
+.banner2{
+    background: #006bd5;
+}
+.banner3{
+    background: #d8e22d;
+}
+.banner4{
+    background: #3d435f;
+}
+.banner img{
+    width: 880px;
+    height: 575px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.banner:nth-child(1){
+    left: 0;
+}
+.new{
+    font-size: 13px;
+    color: #fff;
+    background: #4477be;
+    padding: 3px 5px 2px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 31%;
+    left: 200px;
+    cursor: pointer;
+}
+.banner_test1{
+    position: absolute;
+    left: 200px;
+    top: 36%;
+    font-size: 2.8rem;
+}
+.banner_test2{
+    position: absolute;
+    left: 200px;
+    top: 55%;
+    font-size: 1.37rem;
+}
+.banner_txt1{
+    position: absolute;
+    left: 200px;
+    top: 36%;
+    font-size: 2.8rem;
+}
+.banner1_txt2{
+    position: absolute;
+    left: 200px;
+    top: 46%;
+    font-size: 1.37rem;
+} 
+.banner1_txt3{
+    position: absolute;
+    left: 200px;
+    top: 50%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #5f5f5f;
+}
+.new2{
+    top: 28%;
+}
+.banner2_txt1{
+    top: 33%;
+}
+.banner2_txt2{
+    position: absolute;
+    left: 200px;
+    top: 51%;
+    font-size: 1.37rem;
+}
+.banner2_txt3{
+    position: absolute;
+    left: 200px;
+    top: 60%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #2b2b2b;
+}
+.banner3_txt2{
+    top: 55%;
+}
+.banner3_txt3{
+    top: 60%;
+}
+.banner5_txt1{
+    left: 175px;
+    top: 25%;
+}
+.banner5_txt2{
+    left: 175px;
+    top: 55%;
+}
+.banner_btn_box{
+    width: 186px;
+    height: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.banner_slide_L{
+    width: 25px;
+    position: absolute;
+    left: -510px;
+    top: -280px;
+}
+.banner_slide_L img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+.banner_slide_R{
+    width: 25px;
+    position: absolute;
+    right: -510px;
+    top: -280px;
+}
+.banner_slide_R img{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+
+}
+.indi_box{
+    width: 126px;
+    height: 100%;
+    margin-left: 56px;
+}
+.play_stop_box{
+    display: inline-block;
+    position: absolute;
+    left: 32px;
+}
+.indi_circle{
+    width: calc((100% - 50px)/6);
+    height: 100%;
+    float: left;
+    position: relative;
+    margin-right: 10px;
+}
+.stop_btn{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.indi_circle:nth-child(5){
+    margin: 0;
+}
+.indi_circle img{
+    width: 90%;
+}
+.indi{
+    width: 8px;
+    height: 8px;
+    background: #918f8e;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.indi:hover{
+    background: #333;
+    cursor: pointer;
+}
+.indi_active{
+    width: 8px;
+    height: 8px;
+    border: 2px solid #000;
+    background: none;
+}
+.video_box {
+    position: relative;
+    height: 560px;
+    overflow: hidden;
+}
+#video{
+    width: 100%;
+    /* height: 460px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.video_box p{
+    font-size: 2.5rem;
+    font-weight: 900;
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    transform: translateX(-50%);
+}
+.best_seller_box{
+    width: 100%;
+    position: relative;
+}
+.best_banner_box{
+    width: 1200px;
+    height: 410px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: -410px;
+    transform: translateX(-50%);
+    overflow: hidden;
+}
+.best_item_box{
+    width: calc((100% - 120px) / 3);
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+}
+.best_item_box img{
+    width: 320px;
+    height: 270px;
+}
+.best_item_box img:hover{
+    transform-origin: center bottom 0px;
+    transform: rotateZ(-10deg);
+}
+.best_seller_txt1{
+    color: #4477be;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-top: 20px;
+}
+.best_seller_txt2{
+    color: #5f5f5f;
+    margin-top: 9.5px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.best_seller_txt3{
+    color: #5f5f5f;
+    font-size: 1rem;
+}
+.best_seller_txt4{
+    font-size: 0.87rem;
+    margin-top: 5px;
+    color: #5f5f5f;
+}
+.best_prev{
+    width: 13px;
+    height: 24px;
+    position: absolute;
+    left: -4px;
+    top: 28%;
+    cursor: pointer;
+}
+.best_prev img{
+    width: 100%;
+    height: 100%;
+}
+.best_next{
+    width: 13px;
+    height: 24px;
+    position: absolute;
+    right: -4px;
+    top: 28%;
+    cursor: pointer;
+}
+.best_next img{
+    width: 100%;
+    height: 100%;
+}
+.scroll_section1{
+    width: 100%;
+    /* height: 780PX; */
+    /* overflow: hidden; */
+}
+.scroll_wrap1{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.scroll_wrap1_banner{
+    width: 100%;
+    height: auto;
+    padding-top: 100px;
+    position: relative;
+}
+.scroll1_banner{
+    width: calc((100% - 215px)/3);
+    height: auto;
+    float: left;
+    position: relative;
+}
+.brand_story{
+    padding-left: 45px;
+    margin-bottom: 50px;
+    top: 80px;
+    opacity: 0;
+}
+.new_arrival{
+    padding-left: 45px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+    top: -120px;
+    opacity: 0;
+}
+.award_winner{
+    padding-left: 45px;
+    margin-left: 40px;
+    margin-bottom: 50px; 
+    top: 80px;
+    opacity: 0;
+}
+.brand_story_active{
+    transition: all 2s;
+    top: 0;
+    opacity: 1;
+}
+.brand_story_img{
+    width: 100%;
+}
+.brand_story_img img{
+    width: 100%;
+}
+.new_arrival_img{
+    width: 100%;
+}
+.new_arrival_img img{
+    width: 100%;
+}
+.award_winner_img{
+    width: 100%;
+}
+.award_winner_img img{
+    width: 100%;
+}
+h3{
+   position: absolute;
+   font-size: 1rem;
+   font-weight: 600;
+   color: #4477be;
+   letter-spacing: 1px;
+   transform: rotate(270deg);
+}
+.brand_story h3:nth-child(1){
+    left: -40px;
+    top: 36px;
+}
+.new_arrival h3:nth-child(1){
+    left: -40px;
+    top: 36px;
+}
+.award_winner h3:nth-child(1){
+    left: -50px;
+    top: 45px;
+}
+.brand_story_txt1{
+    font-size: 1.187rem;
+    color: #2b2b2b;
+    margin-top: 17px;
+    margin-bottom: 5px;
+}
+.brand_story_txt2{
+    color: #5f5f5f;
+    font-size: 1rem; 
+}
+.scroll_section2{
+    width: 100%;
+    height: auto;
+}
+.scroll_wrap2{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.scroll_wrap2_banner{
+    width: 100%;
+    height: 800px;
+    padding-top: 150px;
+    position: relative;
+    overflow: hidden;
+}
+.new_arrivals_toner{
+    position: absolute;
+    left: 0;
+    top: 150px;
+    padding-left: 45px;
+    opacity: 0;
+}
+.toner_img{
+    width: 663px;
+}
+.toner_img img{
+    width: 100%;
+}
+.new_arrivals_toner h3{
+    left: -44px;
+    top: 40px;
+}
+.scroll2_txt1{
+    font-size: 1.187rem;
+    color: #2b2b2b;
+    margin-top: 17px;
+    margin-bottom: 5px;
+}
+.scroll2_txt2{
+    color: #5f5f5f;
+    font-size: 1rem; 
+}
+.flagship_store{
+    width: 32%;
+    padding-left: 105px;
+    position: absolute;
+    right: 0;
+    top: 300px;
+    opacity: 0;
+}
+.flagship_store h3{
+    right: 360px;
+    top: 47px;
+}
+.flagship_img{
+    width: 100%;
+}
+.flagship_img img{
+    width: 100%;
+}
+.scroll_wrap3_banner{
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+.best_seller_cushion{
+    width: 30%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 45px;
+    padding-right: 60px;
+    opacity: 0;
+
+}
+.best_seller_cushion h3{
+    left: -33px;
+    top: 27px;
+}
+.cushion_img{
+    width: 100%;
+}
+.cushion_img img{
+    width: 100%;
+}
+.campaign{
+    width: 667px;
+    position: absolute;
+    right: 0;
+    top: 200px;
+    padding-left: 45px;
+    /* margin-top: 120px; */
+    margin-bottom: 50px;
+    opacity: 0;
+}
+.campaign h3{
+    right: 630px;
+    top: 33px;
+}
+.campaign_img{
+    width: 100%;
+    height: 100%;
+}
+.campaign_img img{
+    width: 100%;
+    height: 100%;
+}
+.bg_gradiant{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:linear-gradient(140deg, #9dc0ed, #fcf4f6);
+    z-index: -9;
+    opacity: 0;
+}
+.bg_img{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    opacity: 0;
+}
+.social{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    text-align: center;
+    position: relative;
+
+}
+.social h2{
+    font-size: 2.625rem;
+    margin-bottom: 40px;
+}
+.social > p{
+    font-size: 1rem;
+    color: #5f5f5f;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.btn_slide{
+    /* width: 40px;
+    height: 80px; */
+    position: absolute;
+    padding: 15px 10px;
+}
+.btn_slide:hover{
+    background: #b1afaf46;
+    cursor: pointer;
+}
+
+#slide_R{
+    right: 0px;
+    top: 47%;
+}
+#slide_L{
+    left: 0px;
+    top: 47%;
+}
+.widget_wrap{
+    width: 1120px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.widget{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+.widget:nth-child(1){
+    left: 0;
+}
+.widget_img{
+    width: calc((100% - 50px) / 5);
+    height: 100%;
+    margin: 0 5px;
+    text-align: center;
+    float: left;
+    position: relative;
+}
+.widget_img img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+}
+.widget_img img:hover{
+    transform: translateY(-10px);
+}
+.insta_box{
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    /* top: 140px; */
+    top: 200px;
+    transition: all 0.3s;
+}
+.widget_img:hover .insta_box{
+    top:140px
+}
+.insta_box img{
+    width: 15px;
+    height: 15px;
+}
+.insta_box span{
+    font-size: 12px;
+    color: #5f5f5f;
+    margin-top: 7px;
+}
+.insta_box p{
+    font-size: 12px;
+    color: #5f5f5f;
+    margin-top: 10px;
+}
+.view_more{
+    display: inline-block;
+    padding: 5px 15px;
+    margin-top: 30px;
+    border: 1px solid;
+    color: #2b2b2b;
+    font-size: 1rem;
+}
+.view_more:hover{
+    cursor: pointer;
+    color: #fff;
+    background: #4477be;
+}
+.t_btn{
+    width: 50px;
+    transform: rotate(270deg);
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    opacity: 0;
+}
+footer{
+    width: 100%;
+    height: 130px;
+    border-top: 1px solid #ddd;
+    padding-bottom: 100px;
+    background: #fff;
+}
+.f_top{
+    width: 100%;
+    height: 44px;
+    border-bottom: 1px solid #ddd;
+}
+.f_top_container{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+}
+.f_menu_ul{
+    float: left;
+    line-height: 44px;
+}
+.f_menu_li{
+    float: left;
+    padding: 0 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.f_icon_box{
+    float: right;
+}
+.f_icon_box img{
+    padding: 10px 8px;
+}
+.f_bot{
+    width: 100%;
+    height: 85px;
+
+}
+.f_bot_container{
+    width: 1200px;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 15px;
+    margin: 0 auto;
+    position: relative;
+}
+.f_bot_container p:nth-child(1){
+    display: inline-block;
+    font-size: 0.9rem;
+    padding-right: 20px;
+}
+.f_bot_container p:nth-child(2){
+    display: inline-block;
+    font-size: 1rem;
+
+}
+.f_bot_container p:nth-child(3){
+    font-size: 1rem;
+    margin-top: 20px;
+    letter-spacing: 0.8px;
+}
+.f_bot_container img{
+    width: 72px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+</style>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <div class="wrap" id="id_top">
+        <header>
+            <div class="logo">
+                <a href="index.php">
+                    <img src="../img/jjlogo.png" alt="logo">
+                </a>
+            </div>
+            <div class="h_icon">
+                <a href="login.php">
+                    <img src="../img/header_account_icon.svg" alt="img">
+                </a>
+                <a href="#">
+                    <img src="../img/header_search_icon.svg" alt="search">
+                </a>
+                <a href="#">
+                    <img src="../img/header_cart_icon.svg" alt="cart">
+                </a>
+            </div>
+            <nav>
+                <div class="nav_btn">
+                    <div class="nav_item nav_item1"><a href="#">CELEB</a></div>
+                    <div class="nav_item nav_item1"><a href="#">PRODUCT</a></div>
+                    <div class="nav_item"><a href="../laneige_html/product.html">&P!CK</a></div>
+                    <div class="nav_item"><a href="#">META</a></div>
+                    <div class="nav_item"><a href="ticket.php">TICKET</a></div>
+                    <div class="nav_item"><a href="#">EVENT</a></div>
+                    <div class="nav_bar"></div>
+                </div>
+                <div class="pan">
+                    <div class="pan_container">
+                        <div class="nav_sub_item" id="nav_sub_item1">
+                            <div class="sub_item" id="sub_item1_L">
+                                <div class="brand_box">
+                                    <p>BoA</p>
+                                    <p>TVXQ!</p>
+                                    <p>SUPER JUNIOR</p>
+                                    <p>SHINEE</p>
+                                    <p>fX</p>
+                                    <p>EXO</p>
+                                    <p>RED VELVET</p>
+                                    <p>NCT</p>
+                                    <p>aespa</p>
+                                </div>
+                            </div>
+                            <div class="sub_item" id="sub_item1_R">
+                                <div class="category_img">
+                                    <img src="../img/celeb.png" alt="celeb">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="nav_sub_item" id="nav_sub_item2">
+                            <div class="sub_item" id="sub_item2_L">
+                                <div class="best_box">
+                                    <p>신상품</p>
+                                    <p>어워드 위너</p>
+                                    <p>베스트셀러</p>
+                                </div>
+                            </div>
+                            <div class="sub_item" id="sub_item2_R">
+                                <div class="category_img">
+                                    <img src="../laneige_img/menu_img5.png" alt="쿠션">
+                                </div>
+                                <p>BEST SELLER</p>
+                                <p>네오 쿠션</p>
+                            </div>
+                        </div> -->
+                        <div class="nav_sub_item" id="nav_sub_item3">
+                            <div class="sub_item" id="sub_item3_L">
+                                <div class="category_menu category_menu1">
+                                    <a href="#"><p>전체보기</p></a>
+                                    <p>MUSIC</p>
+                                    <!-- <div class="border"></div> -->
+                                    <p>CD</p>
+                                    <p>DVD</p>
+                                    <p>etc.</p>
+                                    <p class="cate_bold">PHOTO</p>
+                                    <p>Printed</p>
+                                    <p>Photo Book</p>
+                                    <p class="cate_bold">CONCERT</p>
+                                    <p>Official Fanlight</p>
+                                    <p>Concert Goods</p>
+                                </div>
+                                <div class="category_menu category_menu2">
+                                    <p>LIVING</p>
+                                    <p>Home</p>
+                                    <p>Kitchen</p>
+                                    <p>Tech</p>
+                                    <p>Book</p>
+                                    <p>Pet</p>
+                                </div>
+                                <div class="category_menu category_menu3">
+                                    <p>BEAUTY</p>
+                                    <p>Skin Care</p>
+                                    <p>Make Up</p>
+                                    <p>Cleansing</p>
+                                    <p>Body & Hair</p>
+                                    <p>Pack & Masks</p>
+                                    <p>Perfume</p>
+                                    <p>Tool</p>
+                                    <p>Men’s</p>
+                                </div>
+                                <div class="category_menu category_menu4">
+                                    <p>STATIONERY</p>
+                                    <p>Note</p>
+                                    <p>Office</p>
+                                    <p>Pen</p>
+                                    <p>Deco</p>
+                                    <p>Binder</p>
+                                    <p>Toy</p>
+                                </div>
+                                <div class="category_menu category_menu5">
+                                    <p>FASHION</p>
+                                    <p>Clothing</p>
+                                    <p>Acc</p>
+                                    <p>Jewelry</p>
+                                    <p>CUSTOMIZING</p>
+                                    <p>Phone Case</p>
+                                    <p>Fashion</p>
+                                    <p>Acc</p>
+                                </div>
+                            </div>
+                            <div class="sub_item" id="sub_item3_R">
+                                <div class="category_img">
+                                    <img src="../img/celeb2.png" alt="celeb">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="nav_sub_item" id="nav_sub_item3">
+                            <div class="sub_item" id="sub_item3_L">
+                                <div class="category_menu category_menu1">
+                                    <a href="#"><p>전체보기</p></a>
+                                    <p>유형별</p>
+                                    <div class="border"></div>
+                                    <p>전체보기</p>
+                                    <p>클렌징</p>
+                                    <p>스킨/미스트</p>
+                                    <p>로션/에멀젼</p>
+                                    <p>세럼/에센스</p>
+                                    <p>젤/크림</p>
+                                    <p>마스크/팩</p>
+                                    <p>아이케어</p>
+                                    <p>선케어</p>
+                                    <p>립케어</p>
+                                </div>
+                                <div class="category_menu category_menu2">
+                                    <p>고민별</p>
+                                    <div class="border"></div>
+                                    <p>전체보기</p>
+                                    <p>밸런싱</p>
+                                    <p>수분/보습</p>
+                                    <p>민감/진정</p>
+                                    <p>브라이트닝</p>
+                                    <p>안티에이징</p>
+                                    <p>피지/모공</p>
+                                    <p>자외선차단</p>
+                                </div>
+                                <div class="category_menu category_menu3">
+                                    <p>라인별</p>
+                                    <div class="border"></div>
+                                    <p>전체보기</p>
+                                    <p>피토알렉신</p>
+                                    <p>래디언-C</p>
+                                    <p>클리어-C</p>
+                                    <p>베이직케어</p>
+                                    <p>워터뱅크</p>
+                                    <p>포커스 액티브 앰플</p>
+                                    <p>퍼펙트리뉴</p>
+                                    <p>슬리핑케어</p>
+                                    <p>크림 스킨</p>
+                                    <p>화이트듀</p>
+                                    <p>기타</p>
+                                </div>
+                            </div>
+                            <div class="sub_item" id="sub_item3_R">
+                                <div class="category_img">
+                                    <img src="../laneige_img/menu_img1.png" alt="크림">
+                                </div>
+                                <p>BEST SELLER</p>
+                                <p>래디언-C 크림</p>
+                            </div>
+                        </div> -->
+                        <!-- <div class="nav_sub_item" id="nav_sub_item4">
+                            <div class="sub_item" id="sub_item4_L">
+                                <div class="category_menu category_menu1">
+                                    <a href=""><p>전체보기</p></a>
+                                    <p>페이스</p>
+                                    <div class="border"></div>
+                                    <p>전체보기</p>
+                                    <p>프라이머/메이크업베이스</p>
+                                    <p>파운데이션/컨실러</p>
+                                    <p>쿠션</p>
+                                    <p>파우더/팩트</p>
+                                </div>
+                                <div class="category_menu category_menu2">
+                                    <p>아이</p>
+                                    <div class="border"></div>
+                                    <p>전체보기</p>
+                                    <p>아이브로우</p>
+                                    <p>아이라이너</p>
+                                    <p>마스카라</p>
+                                    <p>소도구</p>
+                                </div>
+                                <div class="category_menu category_menu3">
+                                    <p>립</p>
+                                    <div class="border"></div>
+                                    <p>전체보기</p>
+                                    <p>립스틱</p>
+                                    <p>립틴트</p>
+                                    <p>립밤</p>
+                                </div>
+                            </div>
+                            <div class="sub_item" id="sub_item4_R">
+                                <div class="category_img">
+                                    <img src="../laneige_img/menu_img2.png" alt="립">
+                                </div>
+                                <p>NEW ARRIVAL</p>
+                                <p>얼티미스틱 휘핑 틴트</p>
+                            </div>
+                        </div> -->
+                        <!-- <div class="nav_sub_item" id="nav_sub_item5">
+                            <div class="sub_item" id="sub_item5_L">
+                                <div class="category_menu category_menu1">
+                                    <p class="whole">전체보기</p>
+                                    <p>유형별</p>
+                                    <div class="border"></div>
+                                    <p>전체보기</p>
+                                    <p>클렌징</p>
+                                    <p>스킨/미스트</p>
+                                    <p>로션/에멀젼</p>
+                                    <p>크림</p>
+                                    <p>선케어</p>
+                                    <p>기프트세트</p>
+                                </div>
+                                <div class="category_menu category_menu2">
+                                    <p>고민별</p>
+                                    <div class="border"></div>
+                                    <p>전체보기</p>
+                                    <p>수분/보습</p>
+                                    <p>피지/모공</p>
+                                    <p>주름/탄력/보습</p>
+                                    <p>자외선차단</p>
+                                </div>
+                                <div class="category_menu category_menu3">
+                                    <p>라인별</p>
+                                    <div class="border"></div>
+                                    <p>전체보기</p>
+                                    <p>액티브워터</p>
+                                    <p>블루에너지</p>
+                                    <p>크림 스킨</p>
+                                    <p>기타</p>
+                                </div>
+                            </div>
+                            <div class="sub_item" id="sub_item5_R">
+                                <div class="category_img">
+                                    <img src="../laneige_img/menu_img3.png" alt="크림">
+                                </div>
+                                <p>NEW ARRIVAL</p>
+                                <p>올인원 톤업 크림</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <main>
+            <section class="banner_container">
+                <div class="banner banner1">
+                    <img src="../img/main_img1.jpg" alt="배너">
+                </div>
+                <div class="banner banner2">
+                    <img src="../img/main_img2.jpg" alt="배너">
+                </div>
+                <div class="banner banner3">
+                    <img src="../img/main_img3.jpg" alt="배너">
+                </div>
+                <div class="banner banner4">
+                    <img src="../img/main_img4.jpg" alt="배너">
+                </div>
+                <div class="banner_btn_box">
+                    <div class="banner_btn banner_slide_L">
+                        <img src="../img/main_banner_slide_left.png" alt="button" id="banner_slide_R" class="banner_btn_slide">
+                    </div>
+                    <div class="banner_btn banner_slide_R">
+                        <img src="../img/main_banner_slide_right.png" alt="button" id="banner_slide_L" class="banner_btn_slide">
+                    </div>
+                    <!-- <div class="play_stop_box">
+                        <div class="play_btn play_stop_btn">
+                            <img src="../laneige_img/index/play_btn.png" alt="play">
+                        </div>
+                        <div class="stop_btn play_stop_btn">
+                            <img src="../laneige_img/index/stop_btn.png" alt="stop">
+                        </div>
+                    </div> -->
+                    <!-- <div class="indi_box">
+                        <div class="indi_circle indi_btn">
+                            <div class="indi indi_active"></div>
+                        </div>
+                        <div class="indi_circle indi_btn">
+                            <div class="indi"></div>
+                        </div>
+                        <div class="indi_circle indi_btn">
+                            <div class="indi"></div>
+                        </div>
+                        <div class="indi_circle indi_btn">
+                            <div class="indi"></div>
+                        </div>
+                        <div class="indi_circle indi_btn">
+                            <div class="indi"></div>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+            <section class="video_box">
+                <video id="video" src="../img/bestseller-bg.mp4"autoplay muted loop></video>
+                <p>NEW ALBUM</p>
+            </section>
+            <section class="best_seller_box">
+                <div class="best_banner_box">
+                    <div class="best_item_box">
+                        <img src="../img/album8.png" alt="album">
+                        <p class="best_seller_txt1">aespa The 1st Mini Album</p>
+                        <p class="best_seller_txt2">Savage</p>
+                    </div>
+                    <div class="best_item_box">
+                        <img src="../img/album9.png" alt="album">
+                        <p class="best_seller_txt1">Red Velvet The 6th Mini Album</p>
+                        <p class="best_seller_txt2">Queendum</p>
+                    </div>
+                    <div class="best_item_box">
+                        <img src="../img/album7.png" alt="album">
+                        <p class="best_seller_txt1">KEY The 1st Mini Album</p>
+                        <p class="best_seller_txt2">BAD LOVE</p>
+                    </div>
+                    <div class="best_item_box">
+                        <img src="../img/album10.png" alt="album">
+                        <p class="best_seller_txt1">NCT The 3rd Album</p>
+                        <p class="best_seller_txt2">Universe</p>
+                    </div>
+                    <div class="best_item_box">
+                        <img src="../img/album11.png" alt="album">
+                        <p class="best_seller_txt1">KAI The 2nd Mini Album</p>
+                        <p class="best_seller_txt2">Peaches</p>
+                    </div>
+                    <div class="btn_slide best_prev">
+                        <img src="../img/prev.png" alt="왼쪽">
+                    </div>
+                    <div class="btn_slide best_next">
+                        <img src="../img/next.png" alt="오른쪽">
+                    </div>
+                </div>
+            </section>
+            <section class="scroll_section1">
+                <div class="scroll_wrap1">
+                    <div class="scroll_wrap1_banner">
+                        <div class="brand_story scroll1_banner">
+                            <h3>NEW ITEM</h3>
+                            <div class="brand_story_img">
+                                <img src="../img/new_item1.jpg" alt="item">
+                            </div>
+                        </div>
+                        <div class="new_arrival scroll1_banner">
+                            <h3>NEW ARRIVAL</h3>
+                            <div class="new_arrival_img">
+                                <img src="../img/new_arriver.jpg" alt="new arrival">
+                            </div>
+                        </div>
+                        <div class="award_winner scroll1_banner">
+                            <h3>AWARD WINNER</h3>
+                            <div class="award_winner_img">
+                                <img src="../img/award_winner.jpg" alt="awrad winner">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="scroll_section2">
+                <div class="bg_gradiant"></div>
+                <div class="scroll_wrap2">
+                    <div class="scroll_wrap2_banner">
+                        <div class="new_arrivals_toner">
+                            <h3>NEW ARRIVALS</h3>
+                            <div class="toner_img">
+                                <img src="../img/brandstory.jpg" alt="img">
+                            </div>
+                        </div>
+                        <div class="flagship_store">
+                            <h3>BEST ITEM</h3>
+                            <div class="flagship_img">
+                                <img src="../img/t_img2.jpg" alt="flagship store">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scroll_wrap3_banner">
+                        <div class="best_seller_cushion">
+                            <h3>BEST SELLER</h3>
+                            <div class="cushion_img">
+                                <img src="../img/t_img3.jpg" alt="itme">
+                            </div>
+                        </div>
+                        <div class="campaign">
+                            <h3>flagship_store</h3>
+                            <div class="campaign_img">
+                                <img src="../img/tranditional.jpg" alt="item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="social">
+                <h2>#PRODUCT</h2>
+                <div class="btn_slide" id="slide_R">
+                    <img src="../img/next.png" alt="right">
+                </div>
+                <div class="btn_slide" id="slide_L">
+                    <img src="../img/prev.png" alt="left">
+                </div>
+                <div class="widget_wrap">
+                    <div class="widget">
+                        <div class="widget_img">
+                            <img src="../img/product1.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product2.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product3.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product4.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product5.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget_img">
+                            <img src="../img/product6.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product7.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product8.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product9.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product10.jpg" alt="img">
+                        </div>
+                    </div>
+                    <div class="widget">
+                        <div class="widget_img">
+                            <img src="../img/product11.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product12.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product13.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product14.jpg" alt="img">
+                        </div>
+                        <div class="widget_img">
+                            <img src="../img/product15.jpg" alt="img">
+                        </div>
+                    </div>
+                    <!-- <div class="widget">
+                        <div class="widget_img">
+                            <img src="../laneige_img/index/luminous_img16.jpg" alt="">
+                            <div class="insta_box">
+                                <img src="../laneige_img/index/luminous_user_icon.png" alt="사용자">
+                                <span>Instagram User</span>
+                                <p>#유료광고 #라네즈 #네오쿠션</p>
+                            </div>
+                        </div>
+                        <div class="widget_img">
+                            <img src="../laneige_img/index/luminous_img17.jpg" alt="">
+                            <div class="insta_box">
+                                <img src="../laneige_img/index/luminous_user_icon.png" alt="사용자">
+                                <span>Instagram User</span>
+                                <p>#유료광고 #라네즈 #파운데이션</p>
+                            </div>
+                        </div>
+                        <div class="widget_img">
+                            <img src="../laneige_img/index/luminous_img18.jpg" alt="">
+                            <div class="insta_box">
+                                <img src="../laneige_img/index/luminous_user_icon.png" alt="사용자">
+                                <span>Instagram User</span>
+                                <p>#유료광고 #라네즈 #크림스킨</p>
+                            </div>
+                        </div>
+                        <div class="widget_img">
+                            <img src="../laneige_img/index/luminous_img19.jpg" alt="">
+                            <div class="insta_box">
+                                <img src="../laneige_img/index/luminous_user_icon.png" alt="사용자">
+                                <span>Instagram User</span>
+                                <p>#유료광고 #라네즈 #크림스킨</p>
+                            </div>
+                        </div>
+                        <div class="widget_img">
+                            <img src="../laneige_img/index/luminous_img20.jpg" alt="">
+                            <div class="insta_box">
+                                <img src="../laneige_img/index/luminous_user_icon.png" alt="사용자">
+                                <span>Instagram User</span>
+                                <p>#유료광고 #라네즈 #네오쿠션</p>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="view_more">View More</div>
+            </section>
+        </main>
+        <footer>
+            <div class="f_top">
+                <div class="f_top_container">
+                    <ul class="f_menu_ul">
+                        <li class="f_menu_li">회사소개</li>
+                        <li class="f_menu_li">서비스이용약관</li>
+                        <li class="f_menu_li">UGC 이용약관</li>
+                        <li class="f_menu_li">개인정보처리방침</li>
+                        <li class="f_menu_li">영상정보처리방침</li>
+                        <li class="f_menu_li">뷰티포인트</li>
+                        <li class="f_menu_li">사이트맵</li>
+                        <li class="f_menu_li">공지사항</li>
+                    </ul>
+                    <div class="f_icon_box">
+                        <img src="../img/footer_icon1.png" alt="icon">
+                        <img src="../img/footer_icon2.png" alt="icon">
+                        <img src="../img/footer_icon3.png" alt="icon">
+                    </div>
+                </div>
+            </div>
+            <div class="f_bot">
+                <div class="f_bot_container">
+                    <p>고객상담실 (수신자요금부담) 080-123-4567</p>
+                    <p>운영시간 : 월-금 09:00 ~ 18:00</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href="#id_top" class="top">
+        <img src="../img/top_icon.png" alt="top" class="t_btn">
+    </a>
+    <script>
+        $(document).ready(function(){
+    $('.nav_item1, .pan').mouseenter(function(){
+        $('.pan').addClass('pan_active');
+    });
+    $('.nav_item1, .pan').mouseleave(function(){
+        $('.pan').removeClass('pan_active')
+    });
+    $('.nav_item1').mouseenter(function(){
+        $('.nav_sub_item').removeClass('nav_sub_item_active');
+        $('.nav_sub_item').eq($(this).index()).addClass('nav_sub_item_active');
+    });
+    
+    // $('.bar').css({
+    //     width: $('.menu').eq(0).innerWidth()    
+    // })
+    
+    $('.nav_item').mouseover(function(){
+        let tmp_width = $(this).innerWidth();
+        let over_left = $(this).offset().left;
+        let over_nav_ul = $('.nav_btn').offset().left;
+        console.log(tmp_width,over_left,over_nav_ul)
+    
+        $('.nav_bar').css({
+            left: over_left - over_nav_ul,
+            width: tmp_width
+           
+        })
+    });
+    
+    $('.nav_item').mouseout(function(){
+        $('.nav_bar').css({
+            width: 0
+        })
+    })
+    
+    
+    function slide(coming_i, coming_pos, outing_i, outing_pos) {
+
+        // 들어올판 
+        $('.banner').eq( coming_i ).css({left: coming_pos}).animate({
+            left: 0
+        }, 1000);
+
+        // 나갈판 
+        $('.banner').eq( outing_i ).animate({
+            left: outing_pos
+        }, 1000);
+
+        
+        // 인디케이터 색 변경
+        $('.indi').eq(outing_i).removeClass('indi_active');
+        $('.indi').eq(coming_i).addClass('indi_active');
+    }
+
+    function banner_btn_init(){
+        $('.banner_btn').css('pointerEvents' , 'none');
+        setTimeout(function(){
+            $('.banner_btn').css('pointerEvents' , 'auto');
+        }, 1000)
+    }
+
+    function banner_star_interval(){
+        interval = setInterval(function(){
+            $('.banner_slide_R').trigger('click')
+        }, 4000);
+    }
+
+    $('.banner').eq(0).css({left: 0})
+
+    let banner_index = 1
+    let banner_count = $('.banner').length
+    
+    $('.indi').click(function(){   
+        banner_btn_init()
+        if($('.indi_active').index() > $(this).index()){
+            //왼쪽에서 들어오게
+            slide($(this).index(), '-100%', $('.indi_active').index() , '100%'); 
+        }
+        else {
+            // 오른쪽에서 들어오게
+            slide($(this).index(), '100%', (banner_index - 1) % banner_count, '-100%'); 
+        }
+        banner_index = $(this).index() + 1;
+
+    })
+    
+
+    $('.banner_slide_R').click(function(){
+        banner_btn_init()
+        $('.banner').eq(banner_index % banner_count).css({
+            left: '100%'
+        }).animate({
+            left: 0
+        }, 1000)
+        $('.banner').eq((banner_index - 1) % banner_count).animate({
+            left: '-100%'
+        }, 1000)
+        banner_index+=1
+
+        // slide(banner_index % banner_count, '100%', (banner_index - 1) % banner_count, '-100%'); 
+        // banner_index+=1; 
+    })
+    $('.banner_slide_L').click(function(){
+        banner_btn_init()
+        banner_index-=1
+        $('.banner').eq((banner_index - 1) % banner_count).css({
+            left: '-100%'
+        }).animate({
+            left: 0
+        }, 1000)
+        $('.banner').eq(banner_index % banner_count).animate({
+            left: '100%'
+        }, 1000)
+        // banner_index-=1;
+        // slide((banner_index - 1) % banner_count, '-100%', banner_index % banner_count, '100%');
+    })
+    let interval;
+    banner_star_interval()
+
+    $('.banner').hover(function(){
+        clearInterval(interval)
+        }, function(){
+        banner_star_interval()   
+    })
+
+    $('.play_btn').click(function(){
+        $('.play_btn').fadeToggle(300);
+        $('.stop_btn').fadeToggle(300);
+    });
+    $('.stop_btn').click(function(){
+        $('.play_btn').fadeToggle(300);
+        $('.stop_btn').fadeToggle(300);
+    });
+    
+
+
+    
+
+    //best item slide
+    function btn_init(){
+        $('.btn_slide').click(function(){
+            $('.btn_slide').css('pointerEvents' , 'none');
+            setTimeout(function(){
+                $('.btn_slide').css('pointerEvents' , 'auto');
+            }, 300)
+        })
+    }
+    
+    
+    
+    let item_width = $('.best_item_box').eq(0).outerWidth();
+    let item_count = $('.best_item_box').length;
+    
+    for(let i=0; i<item_count; i++){
+        $('.best_item_box').eq(i).css({left: item_width * i})
+    }
+    let best_index = 0;
+    
+    $('.best_next').click(function(){
+        btn_init()
+        $('.best_item_box').animate({
+            left: '-='+item_width
+        }, 300, 'linear')
+    
+        $('.best_item_box').eq(best_index % item_count).animate({
+            left: item_width * (item_count - 1)
+        }, 0, 'linear')
+        best_index += 1;
+    })
+    
+    
+    $('.best_prev').click(function(){
+        btn_init()
+        best_index-=1;
+        $('.best_item_box').eq(best_index % item_count).animate({
+            left: -item_width
+        }, 0, 'linear')
+    
+        $('.best_item_box').animate({
+            left: '+='+item_width
+        }, 300, 'linear');
+    })
+    
+    $(window).scroll(function(){
+        let s_top = $(window).scrollTop();
+        let w_height = $(window).height();
+    
+        if($(this).scrollTop() >= $('.scroll_wrap1_banner').offset().top-800){
+            // alert(1)
+            $('.brand_story').addClass('brand_story_active');
+            $('.new_arrival').addClass('brand_story_active');
+            $('.award_winner').addClass('brand_story_active');  
+        }
+        
+        if($(this).scrollTop() >= $('.scroll_wrap2_banner').offset().top - 200){
+            $('.new_arrivals_toner').css({
+                opacity: '1',
+                transition: 'all 3s'
+            })
+            
+        }
+        
+        if($(this).scrollTop() >= $('.scroll_wrap2_banner').offset().top - 300){
+            $('.flagship_store').css({
+                opacity: '1',
+                top: '150px',
+                transition: 'all 2s'
+        
+            })
+        }
+        
+        if($(this).scrollTop() >= $('.scroll_wrap2_banner').offset().top + 100){
+            $('.best_seller_cushion').css({
+                opacity: '1',
+                top: '-100px',
+                transition: 'all 2s'
+            })
+            
+        }
+        if($(this).scrollTop() >= $('.scroll_wrap2_banner').offset().top + 500){
+            // alert(111)
+            $('.campaign').css({
+                opacity: '1',
+                top: '-100px',
+                transition: 'all 2s'
+        
+            })
+        }
+    
+        if($(this).scrollTop() >= $('.scroll_section1').offset().top){
+            $('.bg_gradiant').css({
+                opacity: '0',
+                transition: 'all 0.5s'
+            })
+            // alert(1) 
+        }
+        if($(this).scrollTop() >= $('.scroll_section1').offset().top+200){
+            $('.bg_gradiant').css({
+                opacity: '0.4',
+                transition: 'all 0.5s'
+            })
+            // alert(1) 
+        }
+        if($(this).scrollTop() >= $('.scroll_wrap2_banner').offset().top){
+            $('.bg_gradiant').css({
+                opacity: '0.8',
+                transition: 'all 0.5s'
+            })
+            // alert(1) 
+        }
+        
+        if($(this).scrollTop() >= $('.scroll_wrap3_banner').offset().top-400){
+            // alert(2)
+            $('.bg_gradiant').css({
+                opacity: '1',
+                transition: 'all 0.3s'
+            })
+        }
+        if($(this).scrollTop() >= $('.scroll_wrap3_banner').offset().top-200){
+            // alert(2)
+            $('.bg_gradiant').css({
+                opacity: '0.4',
+                transition: 'all 0.5s'
+            })
+        }
+        if($(this).scrollTop() >= $('.scroll_wrap3_banner').offset().top){
+            // alert(2)
+            $('.bg_gradiant').css({
+                opacity: '0',
+                // transition: 'all 1s'
+            })
+        }
+    
+        if($(this).scrollTop() <= $('.scroll_section1').offset().top+500){
+            // alert(999)
+            $('.bg_img').css({
+                display: 'none',
+                opacity: '0',
+                transition: 'all 0.2s'
+            })
+        }
+        if($(this).scrollTop() >= $('.scroll_section1').offset().top+600){
+            // alert(999)
+            $('.bg_img').css({
+                opacity: '1',
+                display: 'block'
+                // transition: 'all 2s'
+            })
+        }
+        if($(this).scrollTop() >= $('.scroll_wrap3_banner').offset().top){
+            // alert(2)
+            $('.bg_img').css({
+                display: 'none',
+                opacity: '0',
+                transition: 'all 0.2s'
+            })
+        }
+        
+        if($(this).scrollTop() >= $('.video_box').offset().top){
+            $('.t_btn').css({
+                opacity:'1'
+            })
+        }
+        else{
+            $('.t_btn').css({
+                opacity: 0
+            })
+        }
+    
+    
+    
+    });
+    
+    
+    function btn_init(){
+        $('.btn_slide').click(function(){
+            $('.btn_slide').css('pointerEvents' , 'none');
+            setTimeout(function(){
+                $('.btn_slide').css('pointerEvents' , 'auto');
+            }, 500)
+        })
+    }
+    
+    let widget_index = 1;
+    let widget_count = $('.widget').length;
+    
+    $('#slide_R').click(function(){
+        btn_init()
+        $('.widget').eq(widget_index % widget_count).css({
+            left: '100%'
+        }).animate({
+            left: 0
+        }, 500)
+    
+        $('.widget').eq((widget_index - 1) % widget_count).animate({
+            left: '-100%'
+        }, 500)
+    
+        widget_index+=1
+    });
+    
+    $('#slide_L').click(function(){
+        btn_init()
+        widget_index-=1
+        $('.widget').eq((widget_index - 1) % widget_count).css({
+            left: '-100%'
+        }).animate({
+            left: 0
+        }, 500)
+    
+        $('.widget').eq(widget_index % widget_count).animate({
+            left: '100%'
+        }, 500)
+    
+    });
+    
+    $('.top').click(function(){
+        let href = $(this).attr('href')
+        let o_top = $(href).offset().top
+    
+        // console.log(o_top)
+        event.preventDefault()
+        $('html, body').animate({
+            scrollTop: o_top
+        }, 1000)
+    })
+    
+    
+    
+})
+
+    </script>
+</body>
+</html>
